@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+echo "--- :checkered_flag: Authing into AWS"
+
+. scripts/assume-role.sh
