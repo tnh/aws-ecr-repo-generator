@@ -8,7 +8,7 @@ clean:
 	-rf cloudformation/deploy.yaml
 
 validate:
-	scripts/generate_cfn_template.sh
+	scripts/generate_cfn_template.sh repo-name
 	aws cloudformation validate-template --region ap-southeast-2 --template-body file://cloudformation/deploy.yaml
 
 deploy:
