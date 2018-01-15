@@ -6,3 +6,7 @@ steps:
     command: "make validate"
 
   - wait
+
+  - name: ":cloudformation: Deploy template"
+    command: "make deploy"
+    branches: 'master'
