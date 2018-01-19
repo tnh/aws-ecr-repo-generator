@@ -4,9 +4,10 @@
       Properties:
         RepositoryName: XXECRREPOXX
         RepositoryPolicyText:
-          Version: '2008-10-17'
+          Version: "2012-10-17"
           Statement:
-            - Sid: PushImage
+            -
+              Sid: PushImage
               Effect: Allow
               Principal:
                 AWS:
@@ -20,7 +21,8 @@
                 - ecr:InitiateLayerUpload
                 - ecr:UploadLayerPart
                 - ecr:CompleteLayerUpload
-            - Sid: PullImage
+            -
+              Sid: PullImage
               Effect: Allow
               Principal:
                 AWS:
