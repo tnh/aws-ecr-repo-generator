@@ -3,3 +3,14 @@
       DeletionPolicy: Delete
       Properties:
         RepositoryName: XXECRREPOXX
+        RepositoryPolicyText:
+          Version: "2012-10-17"
+          Statement:
+            -
+              Sid: PushImage
+              Effect: Allow
+              Principal:
+                AWS:
+                  - !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+              Action:
+                - ecr:GetDownloadUrlForLayer
