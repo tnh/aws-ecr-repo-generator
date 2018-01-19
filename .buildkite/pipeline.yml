@@ -4,9 +4,10 @@ env:
 steps:
   - name: ":cloudformation: Validate template"
     command: "make validate"
+    artifact_paths: 'cloudformation/deploy.yaml'
 
   - wait
 
   - name: ":cloudformation: Deploy template"
-    command: "make deploy"
+    command: "make download deploy"
     branches: 'master'
